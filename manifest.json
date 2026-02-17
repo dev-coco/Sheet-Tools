@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Sheet Tools",
+  "description": "多功能 Google Sheets 辅助工具。",
+  "version": "1.0.2",
+  "author": "Raz1ner",
+  "action": {
+    "default_icon": "icon/icon.png"
+  },
+  "icons": {
+    "128": "icon/icon.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html",
+    "openPanelOnActionClick": true
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/spreadsheets/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://docs.google.com/spreadsheets/*"
+  ],
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "sidePanel",
+    "clipboardRead"
+  ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sheet Tools</title>
+  <link rel="stylesheet" href="/css/button.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/toastify.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-buttons">
+      <button class="btn btn-lightgreen" id="open-sheet">打开表格</button>
+      <button class="btn btn-lightgreen" id="parse-sheetId">提取表格 ID</button>
+      <button class="btn btn-lightpurple" id="row-repeat">行重复</button>
+      <button class="btn btn-lightpurple" id="column-repeat">列重复</button>
+      <button class="btn btn-lightorange" id="remove-duplicates">排重</button>
+      <button class="btn btn-lightorange" id="set-wildcard">通配符</button>
+      <button class="btn btn-lightblue" id="split-func-oneline">拆分函数为单行</button>
+      <button class="btn btn-lightgreen" id="copy-sheet-name">复制表格名字</button>
+      <button class="btn btn-lightred" id="reference-convert">引用转换</button>
+    </div>
+    <div class="accordion-container">
+      <button class="accordion-btn btn-lightred" id="sheet-accordion-btn">快速切换工作表</button>
+      <div class="accordion-content" id="sheet-accordion-content">
+        <div class="accordion-inner-wrapper">
+          <div class="search-bar-container">
+            <input type="text" class="sheet-search-input" id="sheet-search" placeholder="搜索工作表名称..." />
+            <label class="switch-container">
+              <input type="checkbox" id="filter-hidden-switch" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <ul class="sheet-list" id="sheet-list-container"></ul>
+        </div>
+      </div>
+    </div>
+    <textarea class="main-textarea" placeholder="请输入内容"></textarea>
+    <div class="bottom-controls">
+      <div class="input-group">
+        <input type="text" class="input-field" placeholder="原始内容" />
+        <input type="text" class="input-field" placeholder="替换内容" />
+      </div>
+      <button class="btn btn-lightorange" id="replace-content">替换</button>
+    </div>
+    <button class="btn btn-lightpurple" id="formula-format" style="width: 100%">公式格式化</button>
+  </div>
+  <script src="/js/toastify.js"></script>
+  <script src="/js/popper.js"></script>
+  <script src="/js/tippy.js"></script>
+  <script src="js/excel-formula.js"></script>
+  <script src="/js/sidepanel.js"></script>
+</body>
+
+</html>
